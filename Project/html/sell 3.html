@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DreamHouse</title>
+        <link rel="stylesheet" href="../css/main.css"/>
+        <link rel="stylesheet" href="../css/sell1,2.css">
+        <link rel="stylesheet" href="../css/onboaded.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+        <script type="text/javascript" src="JS/popup.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+    </head>
+    <body>
+        <!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+          <a href="../index.html" class="logo"><img src="../assets/logo.png" alt="Dream House"></a>
+          <ul class="main-nav">
+            <li>
+              <button class="myAccount">
+                  <img src="../assets/Vector.png"> &nbsp;&nbsp;&nbsp;&nbsp; My Account <br>
+              </button>
+              <!-- Start Megamenu -->
+              <div class="mega-menu">
+                <ul class="links">
+                  <li>
+                    <a href="settings.html">Account Settings</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Megamenu -->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Header -->
+      <!-- Start Sell Landing -->
+      <div class="sell_3_landing_phrase">
+          <p>Let us find your customer!</p>
+      </div>
+      <!-- End Sell Landing -->
+      <!-- Start Form -->
+      <div class="Form">
+        <div class="property_felters">
+            <div class="operation_Type" id="sell3_operation_type">
+            <p>I want to</p>
+            <label class="radio_button">Sell
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radio_button">Rental
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            </div>
+            <div class="Select_boxes">
+                <div class="sell_3_input">
+                    <p>Location</p>
+                    <input type="list" list="sell-city-input" placeholder="Select">
+                        <datalist id="sell-city-input">
+                            <option value="6 October"></option>
+                            <option value="Alexandria"></option>
+                            <option value="Qalyubia"></option>
+                        </datalist>
+                </div>
+                <div class="sell_3_input">  
+                    <p>Where's in 6 October </p>
+                    <input type="list" list="sell-district-input" placeholder="Select">
+                        <datalist id="sell-district-input">
+                            <option value="El Motamaiez"></option>
+                            <option value="El Sheikh Zayed"></option>
+                            <option value="District 1"></option>
+                            <option value="District 2"></option>
+                            <option value="District 3"></option>
+                            <option value="District 4"></option>
+                            <option value="District 5"></option>
+                            <option value="District 8"></option>
+                            <option value="District 9"></option>
+                            <option value="District 11"></option>
+                        </datalist>
+                </div>
+                <div class="sell_3_input">
+                    <p>property type</p>
+                    <input type="list" list="sell-property-input" placeholder="Select">
+                        <datalist id="sell-property-input">
+                            <option value="Villa"></option>
+                            <option value="Duplex"></option>
+                            <option value="Apartment"></option>
+                        </datalist>
+                </div>
+            </div>
+        </div>
+        <div class="property_pic">
+            <p class="property_headding">Photos for your property</p>
+            <div class="pic_vid_container">
+                <img src="../assets/img-stack 1.png">
+                <p class="input-img-vid-details">Please drag and drop Add 5:10 images</p>
+                <label><input type="file" id="img" name="img" accept="image/*">
+                    Upload your images
+                </label>
+            </div>
+        </div>
+        <div class="property_vid">
+            <p class="property_headding">Videos for your property</p>
+            <div class="pic_vid_container">
+                <img src="../assets/video-gallery-2 1.png">
+                <p class="input-img-vid-details">Please add a video for your entire property</p>
+                <label>
+                    <input type="file" id="img" name="img" accept="video/*">
+                    Upload your images
+                </label>
+            </div>
+        </div>
+        <div class="owner_details">
+            <div class="details_row">
+                <div class="SelectLocation">
+                    <label >Name</label>
+                    <input type="text" placeholder="Enter your name" name="name" />
+                 </div>
+                <div class="SelectLocation">
+                    <label >Mobile number</label>
+                    <input type="password" placeholder="+20 &nbsp;&nbsp;&nbsp;Enter your number" name="name" />
+                </div>
+            </div>
+            <div class="details_coloumn">
+                <p>We will call you in 2 days so we can fill out the rest of information  and recommend it to our user</p>
+                <a href="../index.html"><button><span>Send</span></button></a>
+            </div>
+        </div>
+      </div>
+      <!--End Form -->
+      <div class="footer">
+        <p class="copyright"> Dream House </p>
+      </div>
+    </body>
+</html>

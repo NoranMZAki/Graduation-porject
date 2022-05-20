@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #3c5077;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  padding: 10px 60px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+.popup {
+  width: 652px;
+  height: 405px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1); /*So it be in the cinter of the webPage*/
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+.popImg {
+  margin: 5px 0;
+  width: 70px;
+  height: 72px;
+}
+.popup h2 {
+  margin: 5px 0;
+  color: #305567;
+  font-size: 31px;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.popP {
+  margin: 6px 0;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #4c5355;
+}
+.popContP {
+  margin: 0 0 0 85px;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #172d45;
+}
+.popup input {
+  margin: 0 0 0 85px;
+  height: 50px;
+  width: 390px;
+  border-radius: 10px;
+  border: solid #a0a7af;
+}
+.popup input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #172d45;
+}
+#nameEnter {
+  margin: 0 10px;
+  width: 54px;
+  height: 50px;
+  border: solid #a0a7af;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
