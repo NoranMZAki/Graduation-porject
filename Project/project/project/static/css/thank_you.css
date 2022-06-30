@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+}
+.logo{
+    padding: 10px 0 0 120px ;
+}
+.thank {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+margin-top: 80px;
+}
+
+.thank .firstp {
+margin-top :16px;
+font-family: Poppins;
+font-size: 32px;
+font-weight: 600;
+color: #3c3a55;
+}
+
+.thank .secondp {
+font-family: poppins;
+font-size: 24px;
+text-align: center;
+color: rgba(0, 0, 0, 0.64);
+
+}
+
+.thank button {
+width: 226px;
+height: 64px;
+margin-top: 16px;
+padding: 19px 86px 18px;
+border-radius: 20px;
+background-color: #385df9;
+margin-left: 21px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Poppins;
+font-size: 18px;
+color: #fff;
+border-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}

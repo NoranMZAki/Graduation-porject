@@ -1,0 +1,46 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.all-houses-section-slide {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.house-section-slide {
+  display: none;
+}
+
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ebeffe;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #d1d6ea;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  padding-top: 2px;
+  color: #3d387b;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #a2a6b5;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}

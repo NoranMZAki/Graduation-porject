@@ -1,0 +1,157 @@
+{%extends 'parts/base.html'%}{%load static %} {%block content%} {%load static%}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/onboaded.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sell1,2.css'%}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    {% comment %}
+    <script type="text/javascript" src="{%static 'JS/popup.js'%}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    />
+    {% endcomment %}
+  </head>
+  {%endblock content%} {%block content2%}
+
+  <!-- Start Header -->
+
+  <!-- End Header -->
+  <!-- Start Sell Landing -->
+  <div class="sell_3_landing_phrase">
+    <p>Let us find your customer!</p>
+  </div>
+  <!-- End Sell Landing -->
+  <!-- Start Form -->
+  <div
+    style="width: 500px"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit"><a href="{%url 'sell4'%}"></a>Upload</button>
+    </form>
+  </div>
+
+  <!--End Form -->
+  {% comment %}
+  <form method="POST">
+    {% csrf_token %}
+    <div class="Form">
+      <div class="property_felters">
+        <div class="operation_Type" id="sell3_operation_type">
+          <div class="Select_boxes">
+            <p>
+              <label for="id_type">Type:</label>
+
+              <select name="type" required="" id="id_type">
+                <option value="" selected="">---------</option>
+
+                <option value="1">rent</option>
+
+                <option value="2">sell</option>
+              </select>
+            </p>
+          </div>
+        </div>
+        <div class="Select_boxes">
+          <div class="sell_3_input">
+            <p>Location</p>
+            <input
+              type="url"
+              list="sell-city-input"
+              placeholder="Select"
+              name="location"
+            />
+          </div>
+
+          <div class="sell_3_input">
+            <p>property Kind</p>
+            <input
+              type="list"
+              list="sell-property-input"
+              placeholder="Select"
+              name="prop_type"
+            />
+            <datalist id="sell-property-input">
+              <option value="Villa"></option>
+              <option value="Duplex"></option>
+              <option value="Apartment"></option>
+            </datalist>
+          </div>
+        </div>
+      </div>
+      <div class="property_pic">
+        <p class="property_headding">Photos for your property</p>
+        <div class="pic_vid_container">
+          <img src="../assets/img-stack 1.png" />
+          <p class="input-img-vid-details">
+            Please drag and drop Add 5:10 images
+          </p>
+          <label
+            ><input type="file" name="images" required />
+            Upload your images
+          </label>
+        </div>
+      </div>
+      <div class="property_vid">
+        <p class="property_headding">Videos for your property</p>
+        <div class="pic_vid_container">
+          <img src="../assets/video-gallery-2 1.png" />
+          <p class="input-img-vid-details">
+            Please add a video for your entire property
+          </p>
+          <label>
+            <input type="file" name="videos" required />
+            Upload your Videos
+          </label>
+        </div>
+      </div>
+      <div class="owner_details">
+        <div class="details_coloumn">
+          <p>
+            We will call you in 2 days so we can fill out the rest of
+            information and recommend it to our user
+          </p>
+          <a href="{%url 'index'%}"
+            ><button type="submit"><span>Send</span></button></a
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+  {% endcomment %}
+</html>
+{%endblock content2%}

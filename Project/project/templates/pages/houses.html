@@ -1,0 +1,173 @@
+{%extends 'parts/base.html'%} {%load static %}{%block content%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    />
+  </head>
+  {%endblock content%} {%block content2%}
+  <!-- End Header -->
+  <!-- Start Filters -->
+  <div class="Property_filters">
+    <form class="property_filters_form">
+      <button class="all_houses">
+        <img src="../assets/home.png" /> All Houses
+      </button>
+      <div class="slider">
+        <p class="priceP">Price range</p>
+        <input
+          type="range"
+          min="300000"
+          max="2000000"
+          value="500000"
+          oninput="rangeValue.innerText = this.value"
+        />
+        <p class="rangeValue" id="rangeValue">500000</p>
+      </div>
+      <div class="selector">
+        <div id="selectField">
+          <p id="selectText">City</p>
+          <img src="../assets/5Vector.png" id="arrowIcon" />
+        </div>
+        <ul id="list" class="hide">
+          <li class="options">
+            <p>Cairo</p>
+          </li>
+          <li class="options">
+            <p>6 October</p>
+          </li>
+          <li class="options">
+            <p>Maadi</p>
+          </li>
+        </ul>
+      </div>
+      <div class="num_of_rooms">
+        <p>Number of Rooms</p>
+        <label class="radio_button"
+          >1
+          <input type="radio" checked="checked" name="rooms_num" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio_button"
+          >2
+          <input type="radio" name="rooms_num" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio_button"
+          >3
+          <input type="radio" name="rooms_num" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio_button"
+          >4
+          <input type="radio" name="rooms_num" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <input class="submitBtn" type="submit" value="Apply" />
+    </form>
+  </div>
+  <!-- End Filters-->
+  <!-- Start All houses -->
+  <div class="portfolio" id="portfolio">
+        <div class="PortContainer">
+          
+              
+              
+              
+              
+              
+            <a href="">
+              <div class="PortCard">
+                <img class="cardImg" src="../assets/House103.jpg" alt="" />
+                <div class="info">
+                  <h3 class="cardH">{{x.id}}</h3>
+                  <p class="cardP">{{x.price}}The Pavilion</p>
+                  <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+                  <p class="cardP">
+                    Area: 400 mts2
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Rooms: 4
+                  </p>
+                </div>
+              </div>
+            </a>
+           
+          
+        </div>
+      </div>
+      <!-- End Portfolio -->
+    </div>
+
+  <script>
+    var selectField = document.getElementById("selectField");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var list = document.getElementById("list");
+    var arrowIcon = document.getElementById("arrowIcon");
+
+    selectField.onclick = function () {
+      list.classList.toggle("hide");
+      arrowIcon.classList.toggle("rotate");
+    };
+    for (option of options) {
+      option.onclick = function () {
+        selectText.innerHTML = this.textContent;
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+      };
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("house-section-slide");
+      var dots = document.getElementsByClassName("pageDot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  </html>
+{%endblock content2%}

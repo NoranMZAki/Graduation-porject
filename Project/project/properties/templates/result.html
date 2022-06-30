@@ -1,0 +1,233 @@
+{%extends 'parts/base.html'%}{%load static %} {%block content%} {%load static%}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/onboaded.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{%static 'css/details_Result.css'%}"
+      <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  {%endblock content%} {%block content2%}
+
+  <!-- Start Header -->
+
+  <!-- End Header -->
+  <!-- Start Landing -->
+
+  <div class="house_details">
+    <div>
+      <p id="house_details_p_1">
+        Here you go &nbsp;&nbsp;
+
+        <img src="{%static 'assets/happy-face 1.png'%}" />
+      </p>
+      <h1>This is the average of The prices {{ans}}</h1>
+    </div>
+    <div class="house_details_row">
+      <div class="house_details_row_b">
+        <button>
+          <img src="{%static 'assets/funnel 2.png'%}" />
+
+          sort by: <strong>price</strong>
+        </button>
+        <button>
+          <img src="{%static 'assets/setup-preferences 1.png'%}" />
+
+          Edit your <strong>filter</strong>
+        </button>
+      </div>
+    </div>
+    <div class="house_details_row">
+      <input type="text" id="edit_price" placeholder="700k :  900K" />
+      <input type="text" id="edit_city" placeholder="Cairo" />
+    </div>
+    <p id="house_details_p_2">Here are the best places appropriate for you</p>
+    <img
+      src="{%static 'assets/file-20210624-19-1t2fnjk.png'%}"
+      alt="house Price"
+      id="ML_Graph"
+    />
+    <p id="house_details_p_3">Price in this place</p>
+    <h2>700K EGP</h2>
+    <h4><img src="{%static 'assets/arrow-up.png'%}" /> 7.00%</h4>
+  </div>
+  <!-- End Landing -->
+  <!-- Start Popular-->
+  <div class="Explore_div">
+    <div class="city">
+      <p class="Book-an-online-appoitment">Here's the best choices</p>
+      <!--<div class="popular-scroller">
+          <button class="Rectangle-7"> <img src="assets/3Vector.png"> </button>
+          <button class="Rectangle-6"> <img src="assets/3Vector.png"> </button>
+        </div>-->
+    </div>
+    <div class="popular">
+      <div class="myslides">
+        <img
+          class="city_img"
+          alt="cityveiw"
+          src="{%static 'assets/sherif-moharram-KUxBU4-T2cY-unsplash 1.png'%}"
+        />
+        <div class="city_explore">
+          <section>
+            <h2 class="result_popular_h">Building 2100 M²</h2>
+            <p>7031 N London Ave, Kansas City....</p>
+          </section>
+          <button class="explore_Btn">
+            Explore &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{%static 'assets/7Vector.png'%}" />
+          </button>
+        </div>
+      </div>
+      <div class="myslides">
+        <img
+          class="city_img"
+          alt="cityveiw"
+          src="{%static 'assets/waleed-rostom-rd-QleoFpKQ-unsplash.jpg'%}"
+        />
+
+        <div class="city_explore">
+          <section>
+            <h2 class="result_popular_h">Top floor luxury</h2>
+            <p>7031 N London Ave, Kansas City....</p>
+          </section>
+          <button class="explore_Btn">
+            Explore &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{%static 'assets/7Vector.png'%}" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Popular-->
+  <!-- Start Portfolio -->
+
+  <!-- End Portfolio -->
+  <!-- Start Footer -->
+  <div class="footer">
+    <div class="container">
+      <div id="box">
+        <a><h4 class="footerTitle">Site map</h4></a>
+        <a href="#"><p class="footerElement">Buy property</p></a>
+        <a href="#"><p class="footerElement">Sell property</p></a>
+        <a href="#"><p class="footerElement">Account sittings</p></a>
+      </div>
+      <div id="box">
+        <a><h4 class="footerTitle">About us</h4></a>
+        <a href="#"><p class="footerElement">What we Do</p></a>
+        <a href="#"><p class="footerElement">How we recommend</p></a>
+        <a href="#"><p class="footerElement">Our team</p></a>
+        <a href="#"><p class="footerElement">Contact Us</p></a>
+      </div>
+      <div id="box">
+        <a><h4 class="footerTitle">Social Media</h4></a>
+        <a href="#"><p class="footerElement">FaceBook</p></a>
+        <a href="#"><p class="footerElement">Twitter</p></a>
+        <a href="#"><p class="footerElement">LinkedIn</p></a>
+        <a href="#"><p class="footerElement">Instgram</p></a>
+      </div>
+      <div id="box">
+        <h4 class="footerTitle">Created By</h4>
+        <p class="footerElement">Mohamed Nasr</p>
+        <p class="footerElement">Aya Ebrahim</p>
+        <p class="footerElement">Habiba Galal</p>
+        <p class="footerElement">Noran Mohamed</p>
+        <p class="footerElement">Youssef Ihab</p>
+        <p class="footerElement">Aya Abuelwafa</p>
+      </div>
+    </div>
+    <p class="copyright">Dream House</p>
+  </div>
+  <div class="portfolio" id="portfolio">
+    <div class="PortContainer">
+      <div class="portText">
+        <h4 class="under700">Under EGP 700K</h4>
+        <h2 class="special-heading">Popular now on DreamHouse</h2>
+      </div>
+      <div class="portfolio-content">
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src="{%static 'assets/House101.jpeg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 300K</h3>
+              <p class="cardP">In slah al din, Alexandria</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 7
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src=" {%static 'assets/House102.jpg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 2M</h3>
+              <p class="cardP">Chalets in South Sinai City</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1903 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 3
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src=" {%static 'assets/House103.jpg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 300K</h3>
+              <p class="cardP">The Pavilion</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 4
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+</html>
+{%endblock content2%}

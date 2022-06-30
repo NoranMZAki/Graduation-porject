@@ -1,0 +1,307 @@
+{%load static%}
+
+<!--Start Header-->
+<div class="header" id="header">
+  <div class="container">
+    <a href="#" class="logo"
+      ><img src="{%static  'assets/logo.png'%}" alt="Dream House"
+    /></a>
+    <ul class="main-nav">
+      <li>
+        <button class="myAccount">
+          <img src="{%static  'assets/Vector.png'%}" />
+          &nbsp;&nbsp;&nbsp;&nbsp; My Account <br />
+        </button>
+        <!-- Start Megamenu -->
+        <div class="mega-menu">
+          <ul class="links">
+            <li>
+              <a href="{%url 'login'%}"> logIn/signUp</a>
+            </li>
+            <li>
+              <a href=" {%url 'setting'%}">Account Settings</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Megamenu -->
+      </li>
+    </ul>
+  </div>
+</div>
+<!--End Header-->
+<div class="header" id="header">
+  <div class="container">
+    <a href="../index.html" class="logo"
+      ><img src="{%static  'assets/logo.png'%}" alt="Dream House"
+    /></a>
+    <ul class="main-nav">
+      <li><a href="aboutUs.html">About Us </a></li>
+      <li><a href="sell 3.html">Sell your house </a></li>
+      <li><a href="../index.html#features">Explore properties </a></li>
+      <li>
+        <button class="myAccount">
+          <img src="../assets/Vector.png" /> &nbsp;&nbsp;&nbsp;&nbsp; My Account
+          <br />
+        </button>
+        <!-- Start Megamenu -->
+        <div class="mega-menu">
+          <ul class="links">
+            <li>
+              <a href="sign_in.html">logIn/signUp</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Megamenu -->
+      </li>
+    </ul>
+  </div>
+</div>
+
+not(:last-child) height: 85px; width: 200px;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/details_Result.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sign.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/onboaded.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sell1,2.css'%}" />
+
+    <link rel="stylesheet" href="{%static 'css/thank_you.css'%}" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Work+Sans:ital,wght@0,400;0,700;0,800;1,200;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cdd3632853.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+</html>
+{%static ''%}
+
+<img src="{%static'assets/logo.png'%}" alt="Dream House" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <!-- main css file -->
+    <link rel="stylesheet" href="../css/find.css" />
+    <!-- render all elemnts normally -->
+    <link rel="stylesheet" href="../css/sign.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,800;1,200;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Work+Sans:ital,wght@0,400;0,700;0,800;1,200;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cdd3632853.js"
+      crossorigin="anonymous"
+    ></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="header" id="sign_header">
+      <a href="../index.html" class="logo"
+        ><img src="../assets/logo.png" alt="Dream House"
+      /></a>
+    </div>
+    <div class="sign_in_body">
+      <div class="sign">
+        <img src="../assets/login-1.png" alt="logIn" />
+        <p class="welcome">Create new account</p>
+      </div>
+      <div class="mainSocial">
+        <div class="social" id="social1">
+          <button>
+            <img alt="Webapp founder" src="../assets/1534129544.png" />
+            Sign in with google
+          </button>
+        </div>
+        <div class="social">
+          <button>
+            <img alt="Webapp founder" src="../assets/facebook-icon.png" />
+            Sign in with facebook
+          </button>
+        </div>
+      </div>
+      <form method="POST">
+        <!--form start-->
+        {%crf_token%}
+        <div class="allForm">
+          <div class="user_info">
+            <label>Email address</label>
+            <input
+              class="input"
+              id="input1"
+              type="email"
+              placeholder="             Name@gmail.com"
+              name="name"
+            />
+          </div>
+          <div class="user_info">
+            <label>Password</label>
+            <input
+              class="input"
+              id="input2"
+              type="password"
+              placeholder="            *********** "
+              name="password"
+            />
+          </div>
+          <div class="newSign">
+            <a href="../index.html"
+              ><button class="newSet">
+                <label>Sign in</label><label>></label>
+              </button></a
+            >
+          </div>
+          <div class="newUser">
+            Already have an account,
+            <a href="sign_in.html"> Sign In</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p class="copyright">Dream House</p>
+    </div>
+  </body>
+</html>
+--------------------------------------------------------------------------
+{%extends 'parts/base.html'%}{%load static %} {%block content%}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamHouse</title>
+  <!-- main css file -->
+  <link rel="stylesheet" href="../css/find.css" />
+  <!-- render all elemnts normally -->
+  <link rel="stylesheet" href="{%static 'css/sign.css'%}" />
+  <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+  <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,800;1,200;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Work+Sans:ital,wght@0,400;0,700;0,800;1,200;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://kit.fontawesome.com/cdd3632853.js"
+    crossorigin="anonymous"
+  ></script>
+  <style></style>
+</head>
+{%endblock content%} {%block content2%}
+<div class="sign_in_body">
+  <div class="sign">
+    <img src="{%static 'assets/login-1.png'%}" alt="logIn" />
+    <p class="welcome">Create new account</p>
+  </div>
+  <div class="mainSocial">
+    <div class="social" id="social1">
+      <button>
+        <img alt="Webapp founder" src="{%static 'assets/1534129544.png'%}" />
+        Sign in with google
+      </button>
+    </div>
+    <div class="social">
+      <button>
+        <img alt="Webapp founder" src="{%static 'assets/facebook-icon.png'%}" />
+        Sign in with facebook
+      </button>
+    </div>
+  </div>
+  <form method="POST">
+    <!--form start-->
+    {%csrf_token%}
+    <div class="allForm">
+      <div class="user_info">
+        <label>Email address</label>
+        <input
+          class="input"
+          id="input1"
+          type="email"
+          placeholder="             Name@gmail.com"
+          name="email"
+        />
+      </div>
+      <div class="user_info">
+        <label>Password</label>
+        <input
+          class="input"
+          id="input2"
+          type="password"
+          placeholder="            *********** "
+          name="password"
+        />
+      </div>
+      <div class="newSign">
+        <a href="{%url 'index'%}"
+          ><button class="newSet">
+            <label>Sign Up</label><label>></label>
+          </button></a
+        >
+      </div>
+      <div class="newUser">
+        Already have an account,
+        <a href="{% url 'signin'%} "> Sign In</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="footer">
+  <p class="copyright">Dream House</p>
+</div>
+{%endblock content2%}

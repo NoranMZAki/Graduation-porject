@@ -1,0 +1,194 @@
+{%extends 'parts/base.html'%}{%load static %} {%block content%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/onboaded.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sign.css'%}" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  {%endblock content%} {%block content2%}
+  <!-- End Header -->
+
+<div class="sign_in_body">
+            <div class="text">
+                <h1 id="filtersHeading">Just some question and finish</h1>
+            </div>
+            
+
+  <form action= {%url 'Prediction'%} class="sign_in_form" >
+   {%csrf_token%} 
+   <div class="user_info">
+     <label for="bedrooms" >bedrooms:</label><br> 
+     <input type="text" name="bedrooms" class="sign_in_input" required placeholder="Number of bedrooms"><br>
+     <span class="checkmark"></span>
+   </div>
+   <div class="user_info">
+     <label for="bathrooms"> bathrooms:</label><br>
+     <input type="text" name="bathrooms" required class="sign_in_input" placeholder="Number of bathrooms "><br> 
+     <span class="checkmark"></span>
+   </div>
+   <div class="user_info">
+     <label for="SQFT_Living" >SQFT_Living:</label><br>
+     <input type="text" name="SQFT_Living" required class="sign_in_input" placeholder="Square footage of the apartments  " ><br>  
+     <span class="checkmark"></span>
+   </div>
+   <div class="user_info">
+     <label for="SQFT_lot" class="radio_button">SQFT_lot:</label><br>
+     <input type="text" name="SQFT_lot"required class="sign_in_input" placeholder="Square footage of the land space"><br> 
+     <span class="checkmark"></span>  
+   </div>
+   <div class="user_info">
+     <label for="floors" class="radio_button">floors:</label><br>
+     <input type="text" name="floors" required class="sign_in_input" placeholder="Number of floors" ><br>  
+     <span class="checkmark"></span>
+   </div> 
+
+   <div class="user_info"> 
+     <label for="waterfront" class="radio_button">waterfront:</label><br>
+     <input type="text" name="waterfront" required class="sign_in_input" placeholder="Whether the apartment is overlooking the waterfront or not"><br> 
+     <span class="checkmark"></span>
+   </div>
+   <div class="user_info">
+     <label for="condition" class="radio_button">condition:</label><br>
+     <input type="text" name="condition" required class="sign_in_input" placeholder="ndex from 1 to 4 on the condition of the " ><br> 
+     <span class="checkmark"></span>
+    </div>
+    <div class="user_info">
+   <label for="grade" class="radio_button">grade:</label><br>
+   <input type="text" name="grade" required class="sign_in_input" placeholder="Construction quality which refers to the types of materials used  "><br>  
+   <span class="checkmark"></span>
+    </div>
+  <div class="user_info">
+   <label for="SQFT_above" class="radio_button">SQFT_above:</label><br>
+   <input type="text" name="SQFT_above" required class="sign_in_input" placeholder="Square feet above ground "><br> 
+   <span class="checkmark"></span>
+  </div>
+  <div class="user_info">
+   <label  class="radio_button">yr_built:</label><br> 
+   <input type="text" name="yr_built" required  class="sign_in_input" placeholder="Year built "><br>  
+   <span class="checkmark"></span>
+ </div>
+  <div class="user_info">
+    <label for="lat" class="radio_button">lat:</label><br>
+    <input type="text" name="lat" required class="sign_in_input" placeholder="Latitude  " ><br> 
+    <span class="checkmark"></span> 
+ </div>
+  <div class="user_info">
+   <label for="long" class="radio_button" >long:</label><br>
+   <input type="text" name="long" required class="sign_in_input" placeholder="Longitude "><br>
+   <span class="checkmark"></span>  
+ </div>
+ <div class="user_info">
+   <label for="SQFT_living15" class="radio_button">SQFT_living15:</label><br>
+   <input type="text" name="SQFT_living15" required class="sign_in_input" placeholder="Average size of interior housing living space for the closest 15 houses " ><br>
+   <span class="checkmark"></span>
+ </div>
+  <div class="user_info">
+   <label for="SQFT_lot15" class="radio_button"> SQFT_lot15:</label><br>
+   <input type="text" name="SQFT_lot15" required class="sign_in_input" placeholder="Average size of land lots for the closest 15 houses " ><br> 
+   <span class="checkmark"></span>
+ </div>
+  <div class="newSign">
+  <input  class="newSet" type="submit" name="submit" >
+   </div>                 
+  </form>
+  </div>
+</div>
+</div>
+  
+  <!-- End Filters -->
+  <!-- Start Portfolio -->
+  <div class="portfolio" id="portfolio">
+    <div class="PortContainer">
+      <div class="portText">
+        <h4 class="under700">Under EGP 700K</h4>
+        <h2 class="special-heading">Popular now on DreamHouse</h2>
+      </div>
+      <div class="portfolio-content">
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src="{%static 'assets/House101.jpeg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 300K</h3>
+              <p class="cardP">In slah al din, Alexandria</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 7
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src=" {%static 'assets/House102.jpg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 2M</h3>
+              <p class="cardP">Chalets in South Sinai City</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1903 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 3
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="{%url 'details'%}">
+          <div class="PortCard">
+            <img
+              class="cardImg"
+              src=" {%static 'assets/House103.jpg'%}"
+              alt=""
+            />
+            <div class="info">
+              <h3 class="cardH">EGP 300K</h3>
+              <p class="cardP">The Pavilion</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 4
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- End Portfolio -->
+  <!-- Start Footer -->
+
+  <!-- End Footer -->
+</html>
+{%endblock content2%}

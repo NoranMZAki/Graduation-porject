@@ -1,0 +1,342 @@
+.sell-landing {
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  height: 844px;
+  flex-grow: 0;
+  margin: -40px 0 30px 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebeffe;
+  /*
+  background-image: url("../assets/Screenshot\ 2022-03-27\ 145846.png");
+  background-repeat: no-repeat*/
+}
+.sell-landing-text {
+  display: flex;
+  flex-direction: column;
+}
+.sell-landing-text h2 {
+  width: 523px;
+  height: 41px;
+  flex-grow: 0;
+  margin: 0 4px 16px 6px;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.01;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2f2d4a;
+}
+.sell-landing-text p {
+  width: 449px;
+  height: 27px;
+  flex-grow: 0;
+  margin: 16px 42px 36px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.64);
+}
+.sell-landing-input {
+  display: flex;
+  flex-direction: row;
+}
+.sell-landing-input input {
+  width: 388px;
+  height: 70px;
+  flex-grow: 0;
+  margin: 30px 0 0 0;
+  padding: 14px 15.8px 10px 18px;
+  border-radius: 10px;
+  border: solid 1px #a0a7af;
+}
+.sell-landing-input input::placeholder {
+  font-size: 16px;
+  margin: 0 0 0 0;
+  font-family: Poppins;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #224a5d;
+}
+.sell-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  background-color: #fff; /*
+  color: #224a5d;*/
+  margin: 28px 0 0 16px;
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  font-size: 18px;
+  transition: var(--main-transition);
+  border-style: none;
+  border-radius: 13px;
+} /*
+@media (max-width: 767px) {
+  #cityEnter {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+.sell-button ::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  transition: var(--main-transition);
+}
+.sell-button :hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+.sell-button :hover::before {
+  left: 0;
+}*/
+
+/*Start Sell 3*/
+/* Start landing*/
+.sell_3_landing_phrase{
+  display: flex;
+  justify-content: center;
+  height: 205px;
+  align-items: center;
+  background: #ebeffe;
+}
+.sell_3_landing_phrase p{
+  width: 523px;
+  height: 41px;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.01;
+  letter-spacing: normal;
+  color: #2f2d4a;
+}
+/*End landing*/
+/*Start form*/
+/*Property felters*/
+.property_felters{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 0 0 ;
+}
+/*Select boxes*/
+.Select_boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 0 118px;
+}
+.sell_3_input p{
+  font-family: Poppins;
+  font-size: 16px;
+  color: #172d45;
+}
+.sell_3_input {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 70px 0 0;
+}
+.sell_3_input input {
+  width: 388px;
+  height: 48px;
+  flex-grow: 0;
+  padding: 14px 15.8px 10px 18px;
+  border-radius: 10px;
+  border: solid 1px #a0a7af;
+}
+.sell_3_input input::placeholder {
+  font-size: 16px;
+  margin: 0 0 0 0;
+  font-family: Poppins;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #224a5d;
+}
+#sell3_operation_type{
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin-right: 570px;
+}
+/*Select boxes*/
+/*property felters*/
+/*property pic and vid*/
+.property_pic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.property_vid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.property_headding{
+  width: 308px;
+  height: 36px;
+  margin: 40px 489px 25px 0px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #224a5d;
+}
+.pic_vid_container{
+  width: 845px;
+    height: 252px;
+    flex-grow: 0;
+    margin: 25px 164px 40px 210px;
+    padding: 61px 274px 39px;
+    border-radius: 15px;
+    border: solid 1px #a0a7af;
+}
+.pic_vid_container img{
+  width: 53px;
+  height: 53px;
+  flex-grow: 0;
+  margin: 0 122px 13px;
+  padding: 3.3px 2.5px 3.3px 2.5px;
+}
+.input-img-vid-details{
+  width: 370px;
+  height: 22px;
+  flex-grow: 0;
+  margin: 13px 0 24px 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.64);
+}
+.pic_vid_container input {
+  visibility: hidden;
+}
+.pic_vid_container label{
+  content: 'Upload your images';
+    border-radius: 10px;
+    background-color: #385df9;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 148px;
+    height: 40px;
+    margin: 24px 85px 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+/*property pic and vid*/
+.details_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.SelectLocation {
+  margin: 32px 14px 20px 55px;
+}
+/*small*/
+@media (min-width:768px) {
+.container2 {
+  width: 750px;
+}
+}
+/*medium*/
+
+@media (min-width:992px) {
+.container2 {
+  width: 970px;
+  padding-left: 60px;
+}
+}
+/*large*/
+@media (min-width:1200px) {
+.container2 {
+  width: 1170px;
+  padding-left: 130px;
+}
+}
+.SelectLocation input {
+  display: block;
+  border: solid 1px #a0a7af;
+  border-radius: 10px;
+  width: 388px;
+  margin-top: 12px;
+  height: 48px;
+  padding-left: 24px;
+  color: #000;
+  font-size: 14px;
+}
+.SelectLocation label {
+  color: #172d45;
+  font-size: 16px;
+}
+.details_coloumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details_coloumn p{
+  margin-top: 32px;
+  color: #172d45;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 767px;
+  height: 24px;
+}
+.details_coloumn button{
+  padding: 19px 90px 18px 90px;
+  border-radius: 20px;
+  background-color: #385df9;
+  border-style: none;
+  color: #fff;
+  font-family: poppins;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: 650px;
+}
+/*End Form*/
+/*End Sell 3*/

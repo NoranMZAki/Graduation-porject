@@ -1,0 +1,540 @@
+{%extends 'parts/base.html'%} {%load static %}{%block content%}
+  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+ <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+  </head>
+
+{%endblock content %}
+    {%block content2%}
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="landContainer">
+          <div class="landText">
+              <p id="landP"> <img src=" {%static 'assets/content-delivery 1.png'%}">&nbsp;&nbsp; By our Artificial Intellgence</p>
+              <h1 id="landH1">Find your dream House Personalized for you</h1>
+              <div class ="landingSearch">
+                  <input type="text" id="city" name="city"  placeholder="Where do you need your house?">
+                  <a class="popButton" id="cityEnter" href="#popup"><img src=" {%static 'assets/3Vector.png'%}"></a>
+              </div>
+              <div id="popup" class="overlay">
+                <div class="popup">
+                      <img class="popImg" src= "{%static 'assets/man-add 1.png'%}  ">
+                      <h2>What is your name?</h2>
+                      <p class="popP">We just need your name to create account for you</p>
+                      <a class="close" href="#"><img src=" {%static 'assets/Group 8.png'%}" alt="close"></a>
+                      <p class="popContP">Your Name</p>
+                      <div class="content">
+                          <input type="text" id="Name" name="yourName" placeholder="         Full Name" >
+                          <button id="nameEnter"> <a href="html/onboaded i.html">
+                            <img src=" {%static 'assets/3Vector.png'%} "> 
+                          </a>
+                        </button>
+                      </div>
+                </div>
+              </div>
+              <p class="light" id="landP">Enter a City</p>
+          </div>
+          <div class="landImage">
+            <img src=" {%static 'assets/clip-online-real-estate-consultant 1.png' %}" alt="Let's find your DreamHome" />
+          </div>
+        </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Features -->
+    <a href="#features"><a/>
+    <div class="features" id="features">
+        <div class="featContainer">
+          <div class="featText">
+            <h1 id="textH">How does Dream House work?</h1>
+            <p id="textP">We help you avoid searching in a large random database of <br> properties by our efficient AI</p>
+          </div>
+        </div>
+        <div class="featContainer2" id="feat">
+          <div class="feat">
+            <img class="featImg" src=" {%static 'assets/computer-upload 1.png'%}">
+            <h2 class="featH">1.Some short quistions</h3>
+            <p class="featP">Firstly, we ask you some questions to get out your need precisely.</p>
+          </div>
+          <div class="feat">
+            <img class="featImg" src="{%static 'assets/Group0.png'%} ">
+            <h2 class="featH">2.Our AI choose precisely</h3>
+            <p class="featP">Our Artificial intelligence processes your data and compares it with our database.</p>
+          </div>
+          <div class="feat">
+            <img class="featImg" src=" {%static 'assets/home-3 1.png'%}">
+            <h2 class="featH">3.Show result</h3>
+            <p class="featP">Lastly, we represent to you personalized results and representations to choose the best.</p>
+          </div>
+        </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="PortContainer">
+          <div class="portText">
+            <h4 class="under700">Under EGP 700K</h4>
+            <h2 class="special-heading">Popular now on DreamHouse</h2>
+          </div>
+          <div class="portfolio-content">
+            <a href="{%url 'details'%}">
+              <div class="PortCard">
+                <img class="cardImg" src="{%static 'assets/House101.jpeg'%}" alt="" />
+                <div class="info">
+                  <h3 class="cardH">EGP 300K</h3>
+                  <p class="cardP">In slah al din, Alexandria</p>
+                  <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+                  <p class="cardP">Area: 1400 mts2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rooms: 7</p>
+                </div>
+              </div>
+            </a>
+            <a href="{%url 'details'%}">
+              <div class="PortCard">
+                <img class="cardImg" src=" {%static 'assets/House102.jpg'%}" alt="" />
+                <div class="info">
+                  <h3 class="cardH">EGP 2M</h3>
+                  <p class="cardP">Chalets in South Sinai City</p>
+                  <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+                  <p class="cardP">Area: 1903 mts2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rooms: 3</p>
+                </div>
+              </div>
+            </a>
+            <a href="{%url 'details'%}">
+              <div class="PortCard">
+                <img class="cardImg" src=" {%static 'assets/House103.jpg'%}" alt="" />
+                <div class="info">
+                  <h3 class="cardH">EGP 300K</h3>
+                  <p class="cardP">The Pavilion</p>
+                  <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+                  <p class="cardP">Area: 400 mts2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rooms: 4</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+    <!-- Start ourGoal -->
+    <div class="ourGoal">
+      <div class="goalContainer">
+          <div class="goalBanner">
+              <div id="goalPic">
+                  <img src=" {%static 'assets/abstract-location-access 1.png'%}">
+              </div>
+              <div id="goalBannerPar">
+                  <p id="bannerParHeader" > We will find your house in a very short Time</p>
+                  <p id="bannerPar" >
+                      Our main focus to deliver your needed house without any effort and short time to
+                      find property and boost this by summary for you in easy graphs</p>
+              </div>
+          </div>
+          <div class="goalBlogs">
+            <button class="blogButtons" id ="blog1" type="button">
+                <img src=" {%static 'assets/Group-1.png'%}"><br>
+                Personalized results</button>
+            <button class="blogButtons" id ="blog2" type="button">
+                <img src=" {%static 'assets/Group 48449.png'%}"><br>
+                Combletely free</button>
+            <button class="blogButtons" id ="blog3" type="button">
+                <img src=" {%static 'assets/real-estate 2.png'%}"><br>
+                Happy experience</button>
+            <button class="blogButtons" id ="blog4" type="button">
+                <img src=" {%static 'assets/Group.png'%}"><br>
+                Budget Variety</button>
+            <button class="blogButtons" id ="blog5" type="button">
+                <img src=" {%static 'assets/Group-3.png'%}"><br>
+                Finish contract papers</button>
+            <button class="blogButtons" id ="blog6" type="button">
+                <img src=" {%static 'assets/Group-2.png'%}"><br>
+                Summary for results</button>
+          </div>
+      </div>
+    </div>
+    <!-- End ourGoal -->
+    <!-- Start Popular-->
+    <div class="Explore_div">
+      <div class="city">
+        <p class="Explore-by-city">Explore by City</p>
+        <p class="Book-an-online-appoitment">Popular now on Dream House</p>
+        <!--<div class="popular-scroller">
+          <button class="Rectangle-7"> <img src="assets/3Vector.png"> </button>
+          <button class="Rectangle-6"> <img src="assets/3Vector.png"> </button>
+        </div>-->
+      </div>
+      <div class="popular">
+        <div class="myslides">
+          <img class="city_img" alt="cityveiw" src="assets/sherif-moharram-KUxBU4-T2cY-unsplash 1.png">
+          <div class="city_explore">
+              <section>
+                  <h2 class="city">Cairo</h2>
+                  <p>920+ properties are available</p>
+              </section>
+              <a href="">
+                <button class="explore_Btn">
+                    Explore &nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src=" {%static 'assets/7Vector.png'%}">
+                </button></a>
+          </div>
+        </div>
+        <div class="myslides">
+          <img class="city_img" alt="cityveiw" src=" {%static 'assets/waleed-rostom-rd-QleoFpKQ-unsplash.jpg'%}">
+          <div class="city_explore">
+              <section>
+                  <h2 class="city">6October</h2>
+                  <p>800+ properties are available</p>
+              </section>
+              <a href="">
+                <button class="explore_Btn">
+                    Explore &nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="{%static 'assets/7Vector.png'%}">
+                </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Popular-->
+    <!-- Start Team -->
+    <div class="Team">
+      <div class="cards"> 
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src="{%static 'assets/4a0a7473-04fe-4ca4-ac8c-e291a27f59f6 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Habiba Galal</h3>
+            <p>Team Leader <br> Back-End Developer</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src="{%static 'assets/87c94e7e-812e-4321-a1e3-5886ac13a23a 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Yousif Ehab</h3>
+            <p>Front-End Developer</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src="{%static 'assets/5ff2d472-7200-4518-b248-a2cfac2dff19 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Aya abulwafa</h3>
+            <p>Data Scientist</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src="{%static 'assets/2b2df030-9193-4129-a1f3-c607e304b7c3 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Noran Mohamed</h3>
+            <p>Front-End Developer</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src="{%static 'assets/2 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Mohamed Nasr</h3>
+            <p>UI/UX</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="member-image">
+            <a><img alt="Webapp founder" src=" {%static 'assets/49c53141-a888-428b-b5ab-6ef204f7b1d6 1.png'%}"></a>
+          </div>
+          <div class="member-caption">
+            <h3>Aya Ebrahim</h3>
+            <p>Data Scientist</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-text" >
+        <h2>Every team member has a specialty</h2>
+        <p>Every team member has been selected precisely to create a strong team for achieving the best experience for you</p>
+        <img class="Academy_logo" alt="Akhbar ElYom Academy Logo" src="{%static 'assets/Acad.png'%}">
+        <a class="team_see_more" href="html/aboutUs.html">See more <img src=" {%static 'assets/3Vector.png'%}"></a>
+      </div>
+    </div>
+    <!-- End Team -->
+    <!-- Start Search-->
+      <div class="search" id="search">
+        <div class="searchContent">
+            <p class="searchHeader">
+                no need for a realtor We take care of everything
+            </p>
+            <p class="searchPar">
+                We responsible for the whole from search for property and filter our big database to you until <br> we deliver it
+            </p>
+            <a href="#">
+              <button class="searchButton"> <span>Find my house&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
+              </span></button></a>
+        </div>
+        <div class="searchImg">
+          <img class="searchHouse" src=" {%static 'assets/searchHouse.png'%}"> 
+        </div>
+      </div>
+    <!-- End Search-->
+    <!-- Start Footer -->
+      
+    <!-- End Footer -->
+  </body>
+</html>
+{%endblock content2%}
+
+
+<form method="POST" action="signin" class="sign_in_form">
+    <!--form start-->
+    {%csrf_token%}
+    <div class="user_info">
+      <label>First Name</label>
+      <input
+        class="sign_in_input"
+        id="fname"
+        type="text"
+        name="fname"
+        required
+      />
+    </div>
+    <div class="user_info">
+      <label>Last Name</label>
+      <input
+        class="sign_in_input"
+        id="Lname"
+        type="text"
+        name="lname"
+        required
+      />
+    </div>
+    <div class="user_info">
+      <label>Username</label>
+      <input
+        class="sign_in_input"
+        id="Username"
+        type="text"
+        name="username"
+        required
+      />
+    </div>
+    <div class="user_info">
+      <label>Email address</label>
+      <input
+        class="sign_in_input"
+        id="email"
+        type="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="user_info">
+      <label>Password</label>
+      <input
+        class="sign_in_input"
+        id="password"
+        type="password"
+        name="pass1"
+        required
+      />
+    </div>
+    <div class="user_info">
+      <label>Confirm password</label>
+      <input
+        class="sign_in_input"
+        id="confirm_password"
+        type="password"
+        name="pass2"
+        required
+      />
+    </div>
+    <div class="newSign">
+      <a href="{%url 'signin'%}"
+        ><button class="newSet">
+          <label>Sign in</label><label>></label>
+        </button></a
+      >
+    </div>
+    <div class="newUser">
+      Already have an account,
+      <a href="{%url 'signin'%}"> Sign In</a>
+    </div>
+    <!--form start-->
+    <div class="allForm">
+      <div class="user_info">
+        <label>First-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" ex:Habiba          "
+          name="fname"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Last-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" ex:Galal         "
+          name="lname"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>User-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" Habiba Galal            "
+          name="username"
+        />
+      </div>
+
+      <div class="user_info">
+        <label>Email address</label>
+        <input
+          class="input"
+          id="input1"
+          type="email"
+          placeholder="             Name@gmail.com"
+          name="email"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Password</label>
+        <input
+          class="input"
+          id="input2"
+          type="password"
+          placeholder="            *********** "
+          name="pass1"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Confirm Password</label>
+        <input
+          class="input"
+          id="input2"
+          type="password"
+          placeholder="            *********** "
+          name="pass2"
+          required
+        />
+      </div>
+
+      <div class="newSign">
+        <a href="{%url 'signin'%}">
+          <button class="newSet" value="save" type="submit">
+            <label>Sign Up</label><label>></label>
+          </button></a
+        >
+      </div>
+      <div class="newUser">
+        Already have an account,
+        <a href="{% url 'signin'%} "> Sign In</a>
+      </div>
+    </div>
+
+    ------------------------------------------------
+
+    <div class="allForm">
+      <div class="user_info">
+        <label>First-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" ex:Habiba          "
+          name="fname"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Last-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" ex:Galal         "
+          name="lname"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>User-name</label>
+        <input
+          class="input"
+          id="input2"
+          type="username"
+          placeholder=" Habiba Galal            "
+          name="username"
+        />
+      </div>
+
+      <div class="user_info">
+        <label>Email address</label>
+        <input
+          class="input"
+          id="input1"
+          type="email"
+          placeholder="             Name@gmail.com"
+          name="email"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Password</label>
+        <input
+          class="input"
+          id="input2"
+          type="password"
+          placeholder="            *********** "
+          name="pass1"
+          required
+        />
+      </div>
+      <div class="user_info">
+        <label>Confirm Password</label>
+        <input
+          class="input"
+          id="input2"
+          type="password"
+          placeholder="            *********** "
+          name="pass2"
+          required
+        />
+      </div>
+
+      <div class="newSign">
+        <a href="{%url 'signin'%}">
+          <button class="newSet" value="save" type="submit">
+            <label>Sign Up</label><label>></label>
+          </button></a
+        >
+      </div>
+      <div class="newUser">
+        Already have an account,
+        <a href="{% url 'signin'%} "> Sign In</a>
+      </div>
+    </div>

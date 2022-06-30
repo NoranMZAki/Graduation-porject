@@ -1,0 +1,158 @@
+{%extends 'parts/base.html'%} {%load static %}{%block content%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    />
+  </head>
+  {%endblock content%} {%block content2%}
+
+  <!-- End Header -->
+  <!-- Start Filters -->
+  <div class="Property_filters">
+    <form class="property_filters_form">
+      {{myFilter.form}}
+      
+      
+      <div class="selector">
+        <div id="selectField">
+         {{count}} 
+        </div>
+        
+      </div>
+     
+      <input class="submitBtn" type="submit" value="Apply" />
+    </form>
+  </div>
+  <!-- End Filters-->
+  <!-- Start All houses -->
+
+  <div class="all-houses-section-slide">
+    
+    <div class="house-section-slide">
+      <!-- Start Portfolio -->
+      <div class="portfolio" id="portfolio">
+        <div class="PortContainer">
+          
+          
+          
+          <div class="portfolio-content">
+            {%for x in page.object_list %}
+            <a href="{%url 'detail' x.id%}">
+              <div class="PortCard">
+                {% comment %} {% if x.image %} {% endcomment %}
+                <img  class="cardImg" src="{{x.image.url}}" alt="">
+                  {% comment %} {% endif %} {% endcomment %}
+                
+                <div class="info">
+                  <h3 class="cardH">{{x.title}}</h3>
+                  <div class="cardP">>
+                  <p class="cardP">Number of floors {{x.floors}} </p>
+                  </div>
+                  {% comment %} <p class="cardP"> {{x.SQFT_Living}}5441 NE NEast River Rd, Chicago, IL 60656</p> {% endcomment %}
+                  <p class="cardP">
+                    Area: {{x.SQFT_Living}}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Rooms: {{x.bedrooms}}
+                  </p>
+                </div>
+              </div>
+            </a>
+            {%endfor %}
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- End Portfolio -->
+    </div>
+  </div>
+  
+  
+    <div class="dot-container">
+    {%if page.has_previous%}
+      <a href="{%url 'allhouses'%}?page={{page.previous_page_number}}"
+        >previous  ></a
+      >
+      {%endif%}  
+       {%if page.has_next %}
+      <a href="{%url 'allhouses'%}?page={{page.next_page_number}}"> next ></a>
+      {%endif%}
+    </div>
+  
+  </div>
+  <!--End All houses-->
+  <!-- Start Footer -->
+
+  <script>
+    var selectField = document.getElementById("selectField");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var list = document.getElementById("list");
+    var arrowIcon = document.getElementById("arrowIcon");
+
+    selectField.onclick = function () {
+      list.classList.toggle("hide");
+      arrowIcon.classList.toggle("rotate");
+    };
+    for (option of options) {
+      option.onclick = function () {
+        selectText.innerHTML = this.textContent;
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+      };
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("house-section-slide");
+      var dots = document.getElementsByClassName("pageDot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</html>
+{%endblock content2%}

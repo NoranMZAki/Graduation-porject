@@ -1,0 +1,66 @@
+{%extends 'parts/base.html'%}{%load static %} {%block content%}
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+     <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+     <link rel="stylesheet" href="{%static 'css/sell1,2.css'%}" />
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Font Awesome -->
+   <link rel="stylesheet" href="{%static 'css/all.min.css'%}" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <script type="text/javascript" src="JS/popup.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+  </head>
+    </head>
+  {%endblock content%} {%block content2%}
+        <!-- Start Header -->
+       
+        <!-- End Header -->
+        <!-- Start landing-->
+        <div class="sell-landing">
+            <div class="sell-landing-text">
+                <h2>Let us find your customer</h2>
+                <p>We will recommend houses for our users for free!</p>
+            </div>
+            <div class="sell-landing-input">
+                <input type="list" list="sell-city-input" placeholder="Select">
+                    <datalist id="sell-city-input">
+                        <option value="6 October"></option>
+                        <option value="Alexandria"></option>
+                        <option value="Qalyubia"></option>
+                    </datalist>
+                <a class="sell-button" id="sell-city-button" href="{%url 'sell3'%}"><img src="{%static  'assets/sell-Vector.png'%}"></a>
+            </div>
+        </div>
+        <!-- End landing-->
+        <!-- Start Search-->
+        <div class="search" id="search">
+            <div class="searchContent">
+                <p class="searchHeader">
+                    no need for a realtor We take care of everything
+                </p>
+                <p class="searchPar">
+                    We responsible for the whole from search for property and filter our big database to you until <br> we deliver it
+                </p>
+                <a href="{%url 'index'%}"><button class="searchButton"> <span>Find my house&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
+                </span></button></a>
+            </div>
+            <div class="searchImg">
+            <img class="searchHouse" src="{%static 'assets/searchHouse.png'%}"> 
+            </div>
+        </div>
+        <!-- End Search-->
+        <!-- Start Footer -->
+       
+        <!-- End Footer -->
+   
+</html>
+{%endblock content2%}

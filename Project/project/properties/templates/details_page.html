@@ -1,0 +1,340 @@
+{%extends 'parts/base.html'%}{%load static %} {%block content%}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamHouse</title>
+     <link rel="stylesheet" href="{%static 'css/main.css'%}" />
+     <link rel="stylesheet" href="{%static 'css/details_Result.css'%}" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+  </head>
+{%endblock content%} {%block content2%}
+  <!-- Start Header -->
+  
+  <!-- End Header -->
+  <!-- Start slide Show-->
+  <div>
+    <div class="house-details">
+      
+      <div class="section_1">
+        <p id="house_address">In slah al din, Alexandria</p>
+        <p id="house_location">
+          <img src=" {%static 'assets/location-48.png'%}" /> &nbsp; 7031 N London Ave,
+          Kansas City, MO 64151
+        </p>
+      </div>
+      
+      <div class="section_2">
+        <p id="price_1"  > {{property.price}}</p>
+        <p id="rooms_1">
+          <img src="{%static 'assets/armchair 1.png'%}"/>  &nbsp; Rooms: {{property.bedrooms}}
+        </p>
+      </div>
+     
+    </div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="{%static 'assets/house/278806054.jpg'%}" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/pexels-mark-mccammon-1080721.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/istockphoto-1297433036-170667a.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/istockphoto-1309517941-170667a.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/pexels-vecislavas-popa-1571467.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/pexels-vecislavas-popa-1571468.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="{%static 'assets/house/pexels-pixabay-210265.jpg'%}"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+  </div>
+  <!-- End slide Show-->
+  <div class="house_describtion_details">
+    <div class="general" id="general">
+      <!--Start navigation-->
+      <div class="details_nav">
+        <a href="#general">General</a>
+        <a href="#location">Location</a>
+        <a href="#main_points">Main points</a>
+        <a href="#costPrediction">Cost prediction</a>
+        <a href="#describtion">Description from seller</a>
+      </div>
+      <!--End navigation-->
+      <h2>General description</h2>
+      <!--Start Location-->
+      <div class="location" id="location">
+        <p class="general_titles">Location</p>
+        <p id="house_location">
+          <img src="{%static 'assets/location-48.png'%}" /> &nbsp; 7031 N London Ave,
+          Kansas City, MO 64151
+        </p>
+        <div class="map">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="791"
+                height="216"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=7031%20N%20London%20Ave,%20Kansas%20City,%20MO%2064151&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              >
+              </iframe>
+             <style>.mapouter{position:relative;text-align:right;height:216px;width:791px;}</style>
+                <style>.gmap_canvas {overflow:hidden;background:none!important;height:216px;width:791px;}</style>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Location-->
+      <!--Start Main Points-->
+      <div class="main_points" id="main_points">
+        <p class="general_titles">Main points</p>
+        <div class="main_points_p">
+          <div class="main_points_row">
+            <div class="points">
+              <p class="points_p_1">
+                <img src="{%static 'assets/money-bag 3.png'%}" />&nbsp; Price
+              </p>
+              <p class="points_p_2">{{property.price}}</p>
+            </div>
+            <div class="points">
+              <p class="points_p_1">
+                <img src="{%static 'assets/full-screen 1.png'%}" />&nbsp; Area
+              </p>
+              <p class="points_p_2"> {{property.SQFT_Living}}mts2</p>
+            </div>
+            <div class="points">
+              <p class="points_p_1">
+                <img src="{%static 'assets/armchair 1.png'%}" />&nbsp; Rooms
+              </p>
+              <p class="points_p_2">{{property.bedrooms}}</p>
+            </div>
+            <div class="points">
+              <p class="points_p_1">
+                <img src="{%static 'assets/bedroom 1.png'%}" />&nbsp; Bathroom
+              </p>
+              <p class="points_p_2">{{property.bedrooms}}</p>
+            </div>
+          </div>
+          <p class="main_points_p_2">
+            {{property.description}}
+            {% comment %} Luxurious and upgraded, this 4 bedroom,<br />
+            4.5 bathroom home of 5,281 sq. ft.<br />
+            (including poolhouse, per independent third-party measurement)
+            <span id="dots_2">...</span><br />
+            <span id="more_2">
+              rests on a lot of 1.23 acres (per county) <br />
+              on a peaceful cul-de-sac in the Lakeside neighborhood.<br />
+              Richly-appointed spaces include large gathering areas,<br />
+              a bright, professional-grade kitchen,<br />
+              spectacular dining room, two walk-out master suites, and a home
+              theater. <br />
+              Contemporary amenities include solar PV and a Tesla EV charging
+              station. <br />
+              The expansive backyard includes a sparkling pool and spa plus a
+              comfortable poolhouse all in private,
+              <br />
+              verdant surroundings. <br />
+              You'll appreciate the short drive to downtown Los Altos, Rancho
+              Shopping Center, <br />
+              access to Interstate 280, and numerous parks and preserves. {% endcomment %}
+            </span>
+            <a onclick="myFunction_2()" id="myBtn_2">Read More</a>
+          </p>
+        </div>
+      </div>
+      <!--End Main Points-->
+      <!--Start Cost Prediction-->
+      <div class="cost_Prediction" id="costPrediction">
+        <p class="general_titles">Our prediction for this property</p>
+        <h2>850K EGP</h2>
+        <h4><img src="{%static 'assets/arrow-up.png'%}" /> 7.00%</h4>
+        <img
+          src="{%static 'assets/file-20210624-19-1t2fnjk.png'%}"
+          alt="house Price"
+          id="ML_Graph_details"
+        />
+      </div>
+      <!--End Cost Prediction-->
+      <!-- Start Describtion-->
+      <div class="describtion" id="describtion">
+        <p class="general_titles">description from seller</p>
+        <p class="describtion_p">
+          We offer you the lowest download rate and the lowest price per meter
+          in the new Narges: 7.700 pounds<br />
+          - Lowest down payment in New Narges: 15% <br />
+          Areas starting from 130 square meters<span id="dots">...</span
+          ><span id="more"
+            ><br />
+            Facade: eastern / sea<br />
+            - We are interested in carefully selecting the locations of the land
+            to be distinguished with direct views of green spaces and main
+            streets<br />
+            - Building on the legal percentage allocated to the device<br />
+            We are interested in selecting the best engineers to apply the best
+            specifications<br />
+            We take care of the best use of the interior spaces<br />
+            We take care of the best facades and architectural entrances
+            <br />- All projects have a central shower and intercom for all
+            units<br />
+            All projects have garages and warehouses<br />
+            Security and guarding for all projects<br />
+            Elevators for all projects
+
+            <br />- Strictly adhere to schedule
+
+            <br />After-sales service for customers
+
+            <br />** Location: South of New Cairo City - Narges Extension
+
+            <br />* Surrounded by (to the north) Al-Narjis neighborhood,
+            buildings, Mountain View Square, the Southern 90th Street, the North
+            90th Street, and the American University
+
+            <br />* (south) Ain Sukhna Road | Hurghada and the ring road
+
+            <br />* (East) Mohamed Naguib axis, which connects to Suez Road and
+            Al-Rehab City
+
+            <br />* (West) The German University GUC, Fatima Al-Sharbatly
+            Mosque, West Arbela, the Third Settlement and the rest of the
+            neighborhoods
+
+            <br />** Site Features:
+
+            <br />* It is located in the distinguished square in New Cairo,
+            which is in the middle of the Fifth Settlement, and therefore it is
+            characterized by a very strategic and vital location Directly in
+            front of the Narges neighborhood, buildings and Gamal Abdel Nasser
+            axis <br />* Only a minute from the Mohamed Naguib axis, which leads
+            to the Suez and Al-Rehab road <br />* Only minutes from the Southern
+            90th Street and the Ring Road <br />* Next to the German University
+            GUC, Fatima Al Sharbatly Mosque and Mountain View Square <br />* It
+            is mediated from all sides by a group of large and high-end
+            compounds<br />
+          </span>
+          <a onclick="myFunction()" id="myBtn">Read More</a>
+        </p>
+      </div>
+      <!-- End Describtion-->
+    </div>
+    <div class="appointment">
+      <button onclick="myFunction_3()" id="myBtn_3">Owner Info</button>
+      <span id="dots_3"></span
+      ><span id="more_3">
+        <p>Robert JR</p>
+        <p>999-526-415</p>
+      </span>
+    </div>
+  </div>
+
+  <!-- Start Portfolio -->
+  <div class="portfolio" id="portfolio">
+    <div class="PortContainer">
+      <div class="portText">
+        <h2 class="detail_page_special_heading">
+          Choices that are appropriate for your need
+        </h2>
+      </div>
+      <div class="portfolio-content">
+        <a href="details_page.html">
+          {%for n in note %}
+          <div class="PortCard">
+            <img class="cardImg" src="{%static 'assets/House101.jpeg'%}" alt="" />
+            <div class="info">
+              <h3 class="cardH">{{n.price}}EGP 300K</h3>
+              <p class="cardP"> {{n.condition}}In slah al din, Alexandria</p>
+              <p class="cardP">{{n.view}}5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 7
+              </p>
+            </div>
+          </div>
+          {%endfor %}
+        </a>
+        {% comment %} <a href="{%url 'detail'%}">
+          <div class="PortCard">
+            <img class="cardImg" src="{%static 'assets/House102.jpg'%}" alt="" />
+            <div class="info">
+              <h3 class="cardH">EGP 2M</h3>
+              <p class="cardP">Chalets in South Sinai City</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 1903 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 3
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="{%url 'detail'%}"
+          ><div class="PortCard">
+            <img class="cardImg" src="{%static 'assets/House103.jpg'%}
+" alt="" />
+            <div class="info">
+              <h3 class="cardH">EGP 300K</h3>
+              <p class="cardP">The Pavilion</p>
+              <p class="cardP">5441 NE NEast River Rd, Chicago, IL 60656</p>
+              <p class="cardP">
+                Area: 400 mts2
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Rooms: 4
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> {% endcomment %}
+  <!-- End Portfolio -->
+  <!-- Start Footer -->
+ 
+  <!-- End Footer -->
+
+  {%endblock content2%}
+</body>

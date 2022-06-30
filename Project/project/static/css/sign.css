@@ -1,0 +1,202 @@
+.sign_in_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_in_landing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_in_landing img{
+  width: 80px;
+  height: 80px;
+  margin-top: 35px;
+}
+.welcome_p{
+  font-family: poppins;
+  font-size: 32px;
+  font-weight: 600;
+  color: #3c3a55;
+  margin: 5px;
+}
+.sign_in_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user_info{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  row-gap: 5px;
+}
+.user_info label{
+  font-family: Poppins;
+  font-size: 16px;
+  color: #172d45;
+}
+.sign_in_input{
+  border-radius: 10px;
+  border: solid 1px #a0a7af;
+  width: 360px;
+  height: 48px;
+  font-size: 16px;
+  font-family: poppins;
+  font-size: 16px;
+  color:#172d45;
+}
+.sign_in_input::placeholder{
+  font-family: Poppins;
+  font-size: 16px;
+  opacity: 0.7;
+  color: #000;
+}
+
+  .newUser {
+    margin: 16px 0 20px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 500;
+    }
+    
+    .newSet {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 360px;
+    border-radius: 10px;
+    background-color: #385df9;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding: 0 24px;
+    height: 48px;
+    color: #fff;
+    font-size: 18px;
+    border-style: none;
+    cursor: pointer;
+    }
+    #save_setting{
+      display: flex;
+      justify-content: center;
+    }
+#sign_in_footer{
+  padding: 0 0 0 0;
+}
+/*
+.sign .welcome {
+    width: 85%;
+    height: 48px;
+    margin: 24px 95px 32px;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #3c3a55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sign{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign img{
+  margin-top: 35px;
+  width: 80px;
+  height: 80px;
+}
+.sign_in_body{
+    margin: 0 0 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.allForm {
+margin-top:170px;
+color: #172d45;
+height: 24px;
+font-weight: 500;
+font-size: 14px;
+justify-content: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.input {
+margin-top: 20px;
+display: block;
+border-radius: 10px;
+border: solid 1px #a0a7af;
+width: 360px;
+height: 48px;
+font-size: 16px;
+}
+.input::placeholder{
+font-family: Poppins;
+font-size: 16px;
+opacity: 0.7;
+color: #000;
+}
+#input1::placeholder{
+background: url('../assets/email.png') no-repeat;
+background-size: 22px 18px;
+background-position: 17px 2px;
+}
+#input2::placeholder{
+background: url('../assets/lock2.png') no-repeat;
+background-size: 20px 22px;
+background-position: 17px 2px; 
+}
+#input3::placeholder{
+background: url('../assets/Vector.png') no-repeat;
+background-size: 17px 20px;
+background-position: 17px 2px;
+}
+.user_info {
+margin-top:20px
+}
+.user_info label{
+font-family: Poppins;
+font-size: 16px;
+color: #172d45;
+position: relative;
+}
+
+.newUser {
+margin: 16px 0 20px 0;
+justify-content: center;
+align-items: center;
+font-size: 16px;
+font-family: Poppins;
+font-weight: 500;
+}
+
+.newSet {
+display: flex;
+justify-content:space-between;
+align-items: center;
+width: 360px;
+border-radius: 10px;
+background-color: #385df9;
+margin-top: 32px;
+margin-bottom: 16px;
+padding: 0 24px;
+height: 48px;
+color: #fff;
+font-size: 18px;
+border-style: none;
+}
+#save_setting{
+  display: flex;
+  justify-content: center;
+}*/
